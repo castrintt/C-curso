@@ -1,21 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-namespace Course
+﻿namespace Course
 {
-    class MyCourse
+    class CourseClass
     {
-        static void Main()
-        { 
-            var firstNumber = 255;
-            var secondNumber = 2311212312;
-            firstNumber++;
-            var isComplete = false;
-            var geneder = 'F';
-            string name; //null
-            name = "Igor";
-            Console.WriteLine(name);
-            var newFloatValue = 123.231;
-            Console.WriteLine(newFloatValue);
+        private int firstNumber = int.Parse(Console.ReadLine());
+        private void Main()
+        {
+            VerifyNumber(this.firstNumber);
         }
 
+        static void VerifyNumber (int num)
+        {
+            if(num % 2 == 0)
+            {
+                Console.WriteLine("PAR");
+            }
+            else
+            {
+                Console.WriteLine("IMPAR");
+            }
+        }
     }
 }
